@@ -93,7 +93,7 @@ const BottomNavigation: React.FC = () => {
     { path: '/problem-study', label: '문제학습', icon: '📝' },
     { path: '/video-study', label: '동영상학습', icon: '🎥' },
     { path: '/basic-terms', label: '기초용어', icon: '📚' },
-    { path: '/my-page', label: '마이페이지', icon: '👤' }
+    { path: '/my-page', label: 'MyPage', icon: '👤' }
   ];
 
   const handleNavigation = (path: string) => {
