@@ -14,12 +14,46 @@ const Header = styled.header`
   text-align: center;
   margin-bottom: 30px;
   animation: fadeIn 0.8s ease-out;
+  position: relative;
+`;
+
+const HeaderContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+`;
+
+const RabbitImage = styled.img`
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  animation: bounce 2s ease-in-out infinite;
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+`;
+
+const TitleContainer = styled.div`
+  text-align: left;
 `;
 
 const Title = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 800;
-  margin-bottom: 10px;
+  margin: 0;
+  line-height: 1.2;
   background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -27,10 +61,21 @@ const Title = styled.h1`
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
+const TitleLine1 = styled(Title)`
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+`;
+
+const TitleLine2 = styled(Title)`
+  font-size: 1.8rem;
+  opacity: 0.9;
+`;
+
 const Subtitle = styled.p`
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
+  margin-top: 10px;
 `;
 
 const TabContainer = styled.div`
@@ -278,7 +323,40 @@ const HomePage: React.FC = () => {
   return (
     <Container>
       <Header>
-        <Title>골든래빗 빠르게 따는 ADsP</Title>
+        <HeaderContent>
+          <RabbitImage 
+            src="/토끼.png" 
+            alt="Golden Rabbit" 
+            onError={(e) => {
+              // 이미지가 없을 경우 이모지로 대체
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+            }}
+          />
+          <TitleContainer>
+            <TitleLine1>골든래빗</TitleLine1>
+            <TitleLine2>
+              <span style={{ 
+                fontSize: '2.2rem', 
+                fontWeight: '900',
+                background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                textShadow: '0 2px 4px rgba(255, 215, 0, 0.3)'
+              }}>빠</span>르게{' '}
+              <span style={{ 
+                fontSize: '2.2rem', 
+                fontWeight: '900',
+                background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                textShadow: '0 2px 4px rgba(255, 215, 0, 0.3)'
+              }}>따</span>는 ADsP
+            </TitleLine2>
+          </TitleContainer>
+        </HeaderContent>
         <Subtitle>데이터 분석 준전문가 자격증 합격을 위한 최고의 학습 도구</Subtitle>
       </Header>
 

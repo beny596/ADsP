@@ -1,0 +1,42 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rabbit body -->
+  <ellipse cx="60" cy="70" rx="25" ry="30" fill="white" stroke="#8B4513" stroke-width="2"/>
+  
+  <!-- Rabbit head -->
+  <circle cx="60" cy="45" r="20" fill="white" stroke="#8B4513" stroke-width="2"/>
+  
+  <!-- Rabbit ears -->
+  <ellipse cx="50" cy="25" rx="8" ry="20" fill="white" stroke="#8B4513" stroke-width="2" transform="rotate(-15 50 25)"/>
+  <ellipse cx="70" cy="25" rx="8" ry="20" fill="white" stroke="#8B4513" stroke-width="2" transform="rotate(15 70 25)"/>
+  
+  <!-- Inner ear color -->
+  <ellipse cx="50" cy="25" rx="5" ry="15" fill="#FFB6C1" transform="rotate(-15 50 25)"/>
+  <ellipse cx="70" cy="25" rx="5" ry="15" fill="#FFB6C1" transform="rotate(15 70 25)"/>
+  
+  <!-- Rabbit eyes -->
+  <circle cx="55" cy="40" r="3" fill="#8B4513"/>
+  <circle cx="65" cy="40" r="3" fill="#8B4513"/>
+  
+  <!-- Rabbit nose -->
+  <ellipse cx="60" cy="48" rx="2" ry="1" fill="#FF69B4"/>
+  
+  <!-- Rabbit mouth -->
+  <path d="M 55 52 Q 60 56 65 52" stroke="#8B4513" stroke-width="1.5" fill="none"/>
+  
+  <!-- Rabbit cheeks -->
+  <circle cx="48" cy="50" r="4" fill="#FFB6C1" opacity="0.7"/>
+  <circle cx="72" cy="50" r="4" fill="#FFB6C1" opacity="0.7"/>
+  
+  <!-- Rabbit tail -->
+  <circle cx="35" cy="85" r="8" fill="white" stroke="#8B4513" stroke-width="2"/>
+  
+  <!-- Carrot bat -->
+  <rect x="85" y="30" width="8" height="40" fill="#FFA500" stroke="#8B4513" stroke-width="1"/>
+  <rect x="87" y="25" width="4" height="8" fill="#228B22" stroke="#8B4513" stroke-width="1"/>
+  
+  <!-- Carrot texture -->
+  <line x1="87" y1="35" x2="91" y2="35" stroke="#FF8C00" stroke-width="1"/>
+  <line x1="87" y1="45" x2="91" y2="45" stroke="#FF8C00" stroke-width="1"/>
+  <line x1="87" y1="55" x2="91" y2="55" stroke="#FF8C00" stroke-width="1"/>
+  <line x1="87" y1="65" x2="91" y2="65" stroke="#FF8C00" stroke-width="1"/>
+</svg>
