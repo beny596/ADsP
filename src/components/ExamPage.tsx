@@ -147,6 +147,8 @@ const QuestionNumber = styled.button<{
 const MainContent = styled.main`
   flex: 1;
   padding: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 90px;
   max-width: 800px;
   margin: 0 auto;
   width: 100%;

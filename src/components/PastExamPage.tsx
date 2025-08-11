@@ -4,10 +4,34 @@ import { useNavigate } from 'react-router-dom';
 import BottomNavigation from './BottomNavigation';
 
 const Container = styled.div`
-  min-height: 100vh;
+  min-height: calc(100vh - 90px);
   padding: 20px;
-  padding-bottom: 100px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding-bottom: 20px;
+  margin-bottom: 90px;
+  background: linear-gradient(135deg, 
+    #FFB6C1 0%, 
+    #FFC0CB 20%, 
+    #FFE4E1 40%, 
+    #F0F8FF 60%, 
+    #E6E6FA 80%, 
+    #DDA0DD 100%);
+  background-attachment: fixed;
+  font-family: 'VT323', monospace;
+  position: relative;
+  overflow-x: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(255, 182, 193, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(230, 230, 250, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
 `;
 
 const Header = styled.header`
@@ -17,14 +41,12 @@ const Header = styled.header`
 `;
 
 const Title = styled.h1`
+  font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 10px;
-  background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 `;
 
 const Subtitle = styled.p`
@@ -73,13 +95,12 @@ const ExamIcon = styled.div`
 `;
 
 const ExamTitle = styled.h2`
+  font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 12px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #667eea;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 `;
 
 const ExamInfo = styled.div`
